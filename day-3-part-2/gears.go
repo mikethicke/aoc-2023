@@ -21,7 +21,7 @@ func main() {
 	gears := findGears(lines)
 	partPositions := getPartPositions(lines)
 	gearRatios := calculateGearRatios(gears, partPositions)
-	sum := sumeGearRatios(gearRatios)
+	sum := sumGearRatios(gearRatios)
 	log.Println(sum)
 }
 
@@ -109,7 +109,7 @@ func findPartsTouchingPoint(point int, lineNumber int, partPositions map[int][]P
 	return parts
 }
 
-func sumeGearRatios(gearRatios []int) int {
+func sumGearRatios(gearRatios []int) int {
 	sum := 0
 	for _, gearRatio := range gearRatios {
 		sum += gearRatio
